@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Rotify",
+  "version": "1.0",
+  "description": "Summarize your screen into a brainrot TikTok video!",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["static/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

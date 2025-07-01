@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+
+# Output media
+/static/*.mp3
+/static/*.mp4
+/static/*.json
+
+# Node modules (if you later use npm tools)
+node_modules/
+
+# VSCode config
+.vscode/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python cache files
+*.pyc
+
+# Extension build artifacts (if using zip/build pipeline)
+*.zip
+build/
+
+# Mac/Linux weirdness
+*.swp

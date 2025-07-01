@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rotify</title>
+  <link rel="stylesheet">
+  <style>
+    body {
+      width: 400px;
+      height: 800px;
+      font-family: sans-serif;
+      background-color: #111;
+      color: white;
+      margin: 0;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #9effc4;
+      text-shadow: 0 0 10px #9effc4;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto 1rem auto;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #9effc4;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .scrollable-output {
+      max-height: 150px;
+      overflow-y: auto;
+      margin-bottom: 1rem;
+      background: #222;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    #video-container {
+      display: none;
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%; /* 16:9 aspect ratio */
+      margin-top: 1rem;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    #subtitles {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 90%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 1.4;
+      color: white;
+      text-shadow: 2px 2px 6px black;
+      white-space: pre-wrap;
+    }
+    .spinner {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      border: 2px solid white;
+      border-top: 2px solid #9effc4;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="logo">Rotify</h1>
+  <button id="summarize">Summarize & Generate</button>
+
+  <div id="status" class="scrollable-output">Click the button to get started.</div>
+
+  <div id="video-container">
+    <video id="brainrotVideo" autoplay muted loop playsinline>
+      <source src="" type="video/mp4">
+    </video>
+    <div id="subtitles"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
