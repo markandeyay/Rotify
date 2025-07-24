@@ -6,7 +6,7 @@ Rotify is a Chrome extension + Flask backend that transforms any webpage into a 
 
 - One-click summarization of the active tab
 - GPT-based summarization
-- ElevenLabs TTS voiceover
+- ElevenLabs text-to-speech voiceover
 - Subway Surfers gameplay as visual background
 - Auto-generated, synced subtitles (JSON)
 - Real-time caption overlay in popup
